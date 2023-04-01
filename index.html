@@ -22,18 +22,18 @@
 			<div class="container header-container">
 				<nav class="nav-container">
 					<a class="link logo-link" href="./index.html">Web<span class="logo-studio">Studio</span></a>
-					<ul class="list nav-menu">
+					<ul class="list header-nav-menu nav-menu">
 						<li class="nav-menu-item"><a class="active link header-link" href="./index.html">Studio</a></li>
 						<li class="nav-menu-item"><a class="link header-link" href="./portfolio.html">Portfolio</a></li>
 						<li class="nav-menu-item"><a class="link header-link" href="">Contacts</a></li>
 					</ul>
 				</nav>
-				<button class="mobile-menu-open" type="button">
+				<button class="mobile-menu-open js-open-menu" type="button">
 					<svg width="32" height="22" class="mobile-menu-icon">
 						<use href="./images/icons.svg#burger"></use>
 					</svg>
 				</button>
-				<address class="contacts">
+				<address class="contacts header-contacts">
 					<ul class="list contacts-items">
 						<li class="contacts-item">
 							<a class="link header-link" href="mailto:info@devstudio.com">info@devstudio.com </a>
@@ -43,6 +43,89 @@
 						</li>
 					</ul>
 				</address>
+			</div>
+
+			<!-- MOBILE MENU -->
+
+			<div class="mobile-menu js-menu-container">
+				<div class="container mobile-menu-container">
+					<button class="close-btn js-close-menu" type="button">
+						<svg class="close-btn-icon" width="8" height="8">
+							<use href="./images/icons.svg#close-btn"></use>
+						</svg>
+					</button>
+					<ul class="list nav-menu">
+						<li class="nav-menu-item"><a class="active link header-link" href="./index.html">Studio</a></li>
+						<li class="nav-menu-item"><a class="link header-link" href="./portfolio.html">Portfolio</a></li>
+						<li class="nav-menu-item"><a class="link header-link" href="">Contacts</a></li>
+					</ul>
+					<div class="mobile-menu-bottom">
+						<address class="contacts">
+							<ul class="list contacts-items">
+								<li class="contacts-item">
+									<a class="phone-link link header-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+								</li>
+								<li class="contacts-item">
+									<a class="mail-link link header-link" href="mailto:info@devstudio.com">info@devstudio.com </a>
+								</li>
+							</ul>
+						</address>
+						<ul class="soc-list list">
+							<li class="soc-list-item">
+								<a
+									href="https://www.instagram.com"
+									class="link soc-list-link"
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label="instagram"
+								>
+									<svg width="24" height="24">
+										<use href="./images/icons.svg#icon-instagram"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="soc-list-item">
+								<a
+									href="https://twitter.com"
+									class="link soc-list-link"
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label="twitter"
+								>
+									<svg width="24" height="24">
+										<use href="./images/icons.svg#icon-twitter"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="soc-list-item">
+								<a
+									href="https://www.facebook.com/"
+									class="link soc-list-link"
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label="facebook"
+								>
+									<svg width="24" height="24">
+										<use href="./images/icons.svg#icon-facebook"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="soc-list-item">
+								<a
+									href="https://www.linkedin.com"
+									class="link soc-list-link"
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label="linkedin"
+								>
+									<svg width="24" height="24">
+										<use href="./images/icons.svg#icon-linkedin"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</header>
 		<main>
@@ -602,6 +685,7 @@
 				</form>
 			</div>
 		</div> -->
+		<script src="./js/mobile-menu.js"></script>
 		<script src="./js/modal.js"></script>
 	</body>
 </html>
