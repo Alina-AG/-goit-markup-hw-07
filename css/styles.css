@@ -207,10 +207,11 @@ img {
     
         
     
-        .soc-list {
+        .mobile-soc-link {
             display: flex;
             flex-wrap: wrap;
             gap: 56px;
+            
         }
     
         .soc-list-link {
@@ -230,19 +231,19 @@ img {
     
 @media screen and (min-width:428px) {
     .container {
-        max-width: 428px;
+        width: 428px;
         margin-left: auto;
         margin-right: auto;
     }
 }
 @media screen and (min-width:768px) {
     .container {
-        min-width: 766px;
+        width: 768px;
     }
 }
 @media screen and (min-width:1200px) {
     .container {
-        min-width: 1158px;
+        width: 1158px;
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -430,18 +431,54 @@ img {
 /*============================Hero=============================*/
 
 .hero-section {
-    /* max-width: 1440px; */
-    width: 100%;
+   
+    max-width: 428px;
     padding-top: 112px;
     padding-bottom: 112px;
     margin-left: auto;
     margin-right: auto;
 
     background-color: var(--dark);
-    background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url(../images/hero_img.jpg);
+    background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url(../images/hero-mobile.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+@media screen and (min-device-pixel-ratio: 2) and (max-width:767px),
+        screen and (min-resolution: 192dpi) and (max-width:767px),
+        screen and (min-resolution:2dppx) and (max-width:767px) {
+            .hero-section{
+                background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)),url(../images/hero-mobile@2x.jpg);
+            }
+    
+}
+@media screen and (min-width:768px) {
+    .hero-section {
+        max-width: 768px;
+        background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url(../images/hero-tablet.jpg);
+    }
+    
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width:768px),
+        screen and (min-resolution: 192dpi) and (min-width:768px),
+        screen and (min-resolution: 2dppx) and (min-width:768px) {
+            .hero-section {
+            background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url(../images/hero-tablet@2x.jpg);
+            }
+}
+@media screen and (min-width:1200px) {
+    .hero-section {
+        max-width: 1440px;
+        background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url(../images/hero-desktop.jpg);
+    }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width:1200px),
+        screen and (min-resolution:192dpi) and (min-width:1200px),
+        screen and (min-resolution:2dppx) {
+            .hero-section {
+                background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url(../images/hero-desktop@2x.jpg);
+            }
+    
 }
 .hero-title {
     width: 320px;
@@ -499,7 +536,7 @@ img {
 }
 @media screen and (min-width:1200px){
     .hero-section {
-        max-width: 1440px;
+        
         padding-bottom: 188px;
         padding-top: 188px;
     }
@@ -596,6 +633,15 @@ img {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
 } 
+.team-item img {
+    max-width: 100%;
+    height: auto;
+    
+}
+.team-item .soc-list {
+    margin-left: auto;
+    margin-right: auto;
+}
 @media screen and (max-width:767px) {
     
     .team-item:not(:last-child) {
@@ -623,6 +669,7 @@ img {
 }
 .soc-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 24px;
@@ -636,11 +683,12 @@ img {
         display: flex;
         flex-wrap: wrap;
         gap: 64px 24px;
+        justify-content: center;
         
     }
         .team-item {
         flex-basis: calc((100% - 24px)/2);
-            
+         margin: 0;   
         }
 }
 @media screen and (min-width: 1200px){
