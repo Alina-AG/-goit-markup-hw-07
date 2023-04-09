@@ -174,6 +174,9 @@ img {
             color: var(--dark);
             transition: color var(--transition-descr);
         }
+            .nav-menu .active {
+            color: var(--primary-brand);
+        }
     
         .phone-link {
             display: block;
@@ -182,17 +185,15 @@ img {
             font-size: 36px;
             line-height: 1.11;
             letter-spacing: 0.02em;
-            color: #434455;
+            color: var(--primary-brand);
         }
     
-        @media screen and (max-width:407px) {
+        @media screen and (max-width:428px) {
             .phone-link {
                 font-size: 20px;
             }
     
-            .soc-list {
-                max-width: 200px;
-            }
+           
         }
     
         .mail-link {
@@ -481,7 +482,8 @@ img {
     
 }
 .hero-title {
-    width: 320px;
+    
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 72px;
@@ -493,12 +495,21 @@ img {
     
     color: var(--white-background);
 }
-@media screen and (max-width: 349px){
-.hero-title {
-    width: 250px;
-    font-size: 24px; 
-    
+@media screen and (max-width: 428px){
+    .hero-title {
+        display: block;
+            padding-left: 16px;
+            padding-right: 16px;
+            max-width: 356px;
+    }
+
+.mobile-soc-link {
+    gap: 24px;
 }
+.soc-list {
+    gap: 12px;
+}
+
 }
 .order-btn {
     display: block;
@@ -530,7 +541,7 @@ img {
     .hero-title {
         width: 496px;
         margin-bottom: 36px;
-        font-size: 56x;
+        font-size: 56px;
         line-height: 1.07;
     }
 }
@@ -638,10 +649,7 @@ img {
     height: auto;
     
 }
-.team-item .soc-list {
-    margin-left: auto;
-    margin-right: auto;
-}
+
 @media screen and (max-width:767px) {
     
     .team-item:not(:last-child) {
@@ -672,8 +680,12 @@ img {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    
     margin-top: 8px;
+}
+@media screen and (min-width: 428px) {
+    .soc-list {
+        gap: 24px;}
 }
 @media screen and (min-width: 768px){
     .team-container {
@@ -821,6 +833,7 @@ footer .soc-list-link:focus {
     
 }
 @media screen and (max-width:767px) {
+   
     .footer-section .logo-link {
         text-align: center;
     }
@@ -860,12 +873,14 @@ footer .soc-list-link:focus {
 
 @media screen and (min-width:768px) {
     .footer-section>.container {
+       
+            width: 582px;
             display: flex;
             flex-wrap: wrap;
             justify-content: start;
             align-items: flex-start;
             gap: 72px 24px;
-            padding-left: 92px;
+            
         }
       footer .soc-list {
         justify-content: start;
@@ -915,11 +930,12 @@ footer .soc-list-link:focus {
     z-index: 100;
     width: 100%;
     height: 100%;
-
+    overflow: auto;
     background-color: var(--modal-overlay);
-
+    
     transition: opacity var(--transition-descr), visibility var(--transition-descr);
 } 
+
 .backdrop.is-hidden {
     visibility: hidden;
     opacity: 0;
@@ -930,7 +946,7 @@ footer .soc-list-link:focus {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    overflow: auto;
+    
     padding: 72px 24px 24px 24px;
     
     width: 408px;
@@ -944,6 +960,12 @@ footer .soc-list-link:focus {
         height: 620px;
     }
     
+}
+@media screen and (max-height:575px) {
+    .modal {
+        top:15px;
+        transform: translate(-50%,0) ;
+    }
 }
 .close-btn {
     position: absolute;
